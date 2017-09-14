@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Membedakan buah buah an dan sayuran</title>
+ 
+<script>
+function tampilkan(){
+ 
+  var nama_kota=document.getElementById("form1").select1.value;
+  var p_kontainer=document.getElementById("container");
+ 
+  if (nama_makanan=="pisang")
+    {
+        p_kontainer.innerHTML="pisang merupakan buah buah an";
+    }
+  else if (nama_makanan=="lobak")
+    {
+        p_kontainer.innerHTML="lobak merupakan sayuran";
+    }
+  else if (nama_makanan=="anggur")
+    {
+        p_kontainer.innerHTML="anggur merupakan bauh buah an";
+    }
+}
+</script>
+</head>
+<body>
+<h2>Ujian apk</h2>
+ 
+<form id="form1" name="form1" onsubmit="return false">
+  <label for="select1">Pilih makanan: </label>
+  <select id="select1" name="select1">
+    <option value="jakarta">pisang</option>
+    <option value="bandung">lobak</option>
+    <option value="bogor">anggur</option>
+  </select>
+  <input type="submit" value="Tampilkan Keterangan" onclick="tampilkan()">
+</form>
+ 
+<p id="container"></p>
+ 
+</body>
+</html>
